@@ -43,6 +43,7 @@ class Simulation():
         #this class can only create food and agents in one size
         self.food_size = food_size
         self.agent_size = agent_size
+        self.display = display
 
     def create_wall(self, x, y, wall_width, wall_height, color):
 
@@ -85,9 +86,9 @@ class Simulation():
             if(step_count > max_steps):
                 done = True
 
-            display.fill(BLACK)
+            self.display.fill(BLACK)
 
-            all_sprite_list.draw(display)
+            all_sprite_list.draw(self.display)
 
             all_sprite_list.update()
             pygame.display.update()
@@ -98,35 +99,3 @@ class Simulation():
 
     def get_fitness(self):
         return [agent.fitness_metric() for agent in self.agent_list]
-
-
-pygame.init()
-display=pygame.display.set_mode((300,300))
-clock=pygame.time.Clock()
-
-simulation = Simulation(display)
-
-screen_width = simulation.screen_width
-screen_height = simulation.screen_height
-
-simulation.create_wall(0,0, screen_width, 30, BLUE)
-
-food_coordinates = [[30,30], [50,50], [70,70]]
-
-for coordinate in food_coordinates:
-    simulation.generate_food(coordinate)
-
-agent_coordinates = [[40, 40]]
-
-maxpooling_filter_size = 5
-sight_radius = 100
-
-sensor = SquareSensor(display, simulation.agent_size, maxpooling_filter_size, sight_radius)
-
-for agent_coordinate in agent_coordinates:
-    brain = AgentBrain(display, sensor, forward_propagation, [4,4,4])
-    weights = np.random.choice(np.arange(-1,1,step=0.01),size=brain.num_weights,replace=True)
-    brain.set_weights(weights)
-    simulation.generate_agent(agent_coordinate, brain)
-
-simulation.run_game(500)

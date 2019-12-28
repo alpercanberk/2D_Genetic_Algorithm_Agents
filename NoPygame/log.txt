@@ -1,0 +1,432 @@
+type dict:
+0 none
+1 agent
+2 food
+3 wall
+initializing food with id:  7L5OPH
+type 2
+coordinates: (5, 5)
+width 2
+height 2
+initializing food with id:  7Y2SIM
+type 2
+coordinates: (8, 8)
+width 2
+height 2
+initializing food with id:  XAGJ8M
+type 2
+coordinates: (11, 11)
+width 2
+height 2
+initializing food with id:  U21LQ0
+type 2
+coordinates: (14, 14)
+width 2
+height 2
+initializing food with id:  5M4YDU
+type 2
+coordinates: (17, 17)
+width 2
+height 2
+initializing food with id:  OGQIOG
+type 2
+coordinates: (20, 20)
+width 2
+height 2
+initializing food with id:  JQN0NE
+type 2
+coordinates: (23, 23)
+width 2
+height 2
+initializing food with id:  S391CP
+type 2
+coordinates: (26, 26)
+width 2
+height 2
+initializing food with id:  KM58PQ
+type 2
+coordinates: (29, 29)
+width 2
+height 2
+initializing food with id:  3F1UOL
+type 2
+coordinates: (32, 32)
+width 2
+height 2
+initializing food with id:  PTYSK6
+type 2
+coordinates: (35, 35)
+width 2
+height 2
+initializing food with id:  7LEA5I
+type 2
+coordinates: (38, 38)
+width 2
+height 2
+initializing food with id:  HXRS63
+type 2
+coordinates: (41, 41)
+width 2
+height 2
+initializing food with id:  TRQHCG
+type 2
+coordinates: (44, 44)
+width 2
+height 2
+initializing food with id:  4XG9CJ
+type 2
+coordinates: (47, 47)
+width 2
+height 2
+initializing food with id:  OZ5BCJ
+type 2
+coordinates: (50, 50)
+width 2
+height 2
+initializing food with id:  MY9JNC
+type 2
+coordinates: (53, 53)
+width 2
+height 2
+initializing food with id:  O74XCN
+type 2
+coordinates: (56, 56)
+width 2
+height 2
+initializing food with id:  5O77V1
+type 2
+coordinates: (59, 59)
+width 2
+height 2
+initializing food with id:  SQJ597
+type 2
+coordinates: (62, 62)
+width 2
+height 2
+initializing food with id:  ABQ70V
+type 2
+coordinates: (65, 65)
+width 2
+height 2
+initializing food with id:  DYJOWB
+type 2
+coordinates: (68, 68)
+width 2
+height 2
+initializing food with id:  B19TRH
+type 2
+coordinates: (71, 71)
+width 2
+height 2
+initializing food with id:  ULHGOS
+type 2
+coordinates: (74, 74)
+width 2
+height 2
+initializing food with id:  M3BS71
+type 2
+coordinates: (77, 77)
+width 2
+height 2
+initializing food with id:  483O4P
+type 2
+coordinates: (80, 80)
+width 2
+height 2
+initializing food with id:  3YYAAK
+type 2
+coordinates: (83, 83)
+width 2
+height 2
+initializing food with id:  K6FHSE
+type 2
+coordinates: (86, 86)
+width 2
+height 2
+initializing food with id:  7Y892R
+type 2
+coordinates: (89, 89)
+width 2
+height 2
+initializing food with id:  2U86XL
+type 2
+coordinates: (92, 92)
+width 2
+height 2
+initializing food with id:  QJ6STZ
+type 2
+coordinates: (95, 95)
+width 2
+height 2
+initializing food with id:  38GGQY
+type 2
+coordinates: (98, 98)
+width 2
+height 2
+initializing wall with id:  0V5LEY
+type 3
+coordinates: (0, 0)
+width 200
+height 5
+initializing wall with id:  Q03OZI
+type 3
+coordinates: (0, 0)
+width 5
+height 500
+initializing wall with id:  13PAR9
+type 3
+coordinates: (0, 495)
+width 500
+height 5
+initializing wall with id:  YWSNRD
+type 3
+coordinates: (195, 0)
+width 5
+height 500
+initializing agent with id:  6H0A0Z
+type 1
+coordinates: (80, 50)
+width 5
+height 5
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 0
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 1
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 2
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 3
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 4
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 5
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 6
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 7
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 8
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 9
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 10
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 11
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 12
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 13
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 14
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 15
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 16
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 17
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 18
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 19
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 20
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 21
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 22
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 23
+agent 6H0A0Z changed position by: (-1, 0)
+food MY9JNC eaten
+Frame 24
+agent 6H0A0Z changed position by: (-1, 0)
+food MY9JNC eaten
+Frame 25
+agent 6H0A0Z changed position by: (-1, 0)
+food MY9JNC eaten
+Frame 26
+agent 6H0A0Z changed position by: (-1, 0)
+food OZ5BCJ eaten
+food MY9JNC eaten
+Frame 27
+agent 6H0A0Z changed position by: (-1, 0)
+food OZ5BCJ eaten
+food MY9JNC eaten
+Frame 28
+agent 6H0A0Z changed position by: (-1, 0)
+food OZ5BCJ eaten
+food MY9JNC eaten
+Frame 29
+agent 6H0A0Z changed position by: (-1, 0)
+food OZ5BCJ eaten
+food MY9JNC eaten
+Frame 30
+agent 6H0A0Z changed position by: (-1, 0)
+food OZ5BCJ eaten
+food MY9JNC eaten
+Frame 31
+agent 6H0A0Z changed position by: (-1, 0)
+food OZ5BCJ eaten
+Frame 32
+agent 6H0A0Z changed position by: (-1, 0)
+food OZ5BCJ eaten
+Frame 33
+agent 6H0A0Z changed position by: (-1, 0)
+food OZ5BCJ eaten
+Frame 34
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 35
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 36
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 37
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 38
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 39
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 40
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 41
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 42
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 43
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 44
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 45
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 46
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 47
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 48
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 49
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 50
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 51
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 52
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 53
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 54
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 55
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 56
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 57
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 58
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 59
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 60
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 61
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 62
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 63
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 64
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 65
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 66
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 67
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 68
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 69
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 70
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 71
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 72
+agent 6H0A0Z changed position by: (-1, 0)
+Frame 73
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 74
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 75
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 76
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 77
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 78
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 79
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 80
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 81
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 82
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 83
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 84
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 85
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 86
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 87
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 88
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 89
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 90
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 91
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 92
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 93
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 94
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 95
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 96
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 97
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 98
+agent 6H0A0Z changed position by: (-1, 0)
+agent 6H0A0Z collided with a wall, ignore change_position
+Frame 99

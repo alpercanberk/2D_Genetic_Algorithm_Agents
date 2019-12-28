@@ -4,6 +4,7 @@ import random
 
 def softmax(z):
     s = np.exp(z.T) / np.sum(np.exp(z.T), axis=1).reshape(-1, 1)
+    #
     return s
 
 

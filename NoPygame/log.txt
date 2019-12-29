@@ -1,432 +1,393 @@
+screen_size
+width 500
+height 200
 type dict:
-0 none
-1 agent
-2 food
-3 wall
-initializing food with id:  7L5OPH
+none 0
+agent 1
+food 2
+wall 3
+initializing food with id:  QR1VYO
 type 2
 coordinates: (5, 5)
 width 2
 height 2
-initializing food with id:  7Y2SIM
+initializing food with id:  WLKEHM
 type 2
 coordinates: (8, 8)
 width 2
 height 2
-initializing food with id:  XAGJ8M
+initializing food with id:  6QX3R1
 type 2
 coordinates: (11, 11)
 width 2
 height 2
-initializing food with id:  U21LQ0
+initializing food with id:  AIG280
 type 2
 coordinates: (14, 14)
 width 2
 height 2
-initializing food with id:  5M4YDU
+initializing food with id:  7S0S1G
 type 2
 coordinates: (17, 17)
 width 2
 height 2
-initializing food with id:  OGQIOG
+initializing food with id:  TBFGF0
 type 2
 coordinates: (20, 20)
 width 2
 height 2
-initializing food with id:  JQN0NE
+initializing food with id:  82YLO8
 type 2
 coordinates: (23, 23)
 width 2
 height 2
-initializing food with id:  S391CP
+initializing food with id:  VPT81H
 type 2
 coordinates: (26, 26)
 width 2
 height 2
-initializing food with id:  KM58PQ
+initializing food with id:  HR5JSY
 type 2
 coordinates: (29, 29)
 width 2
 height 2
-initializing food with id:  3F1UOL
+initializing food with id:  O4YE75
 type 2
 coordinates: (32, 32)
 width 2
 height 2
-initializing food with id:  PTYSK6
+initializing food with id:  FGTKIS
 type 2
 coordinates: (35, 35)
 width 2
 height 2
-initializing food with id:  7LEA5I
+initializing food with id:  WTNFEM
 type 2
 coordinates: (38, 38)
 width 2
 height 2
-initializing food with id:  HXRS63
+initializing food with id:  85ELTC
 type 2
 coordinates: (41, 41)
 width 2
 height 2
-initializing food with id:  TRQHCG
+initializing food with id:  GYTG53
 type 2
 coordinates: (44, 44)
 width 2
 height 2
-initializing food with id:  4XG9CJ
+initializing food with id:  O2Q175
 type 2
 coordinates: (47, 47)
 width 2
 height 2
-initializing food with id:  OZ5BCJ
+initializing food with id:  8L88NK
 type 2
 coordinates: (50, 50)
 width 2
 height 2
-initializing food with id:  MY9JNC
+initializing food with id:  54QX9P
 type 2
 coordinates: (53, 53)
 width 2
 height 2
-initializing food with id:  O74XCN
+initializing food with id:  YGP5AN
 type 2
 coordinates: (56, 56)
 width 2
 height 2
-initializing food with id:  5O77V1
+initializing food with id:  49SJGI
 type 2
 coordinates: (59, 59)
 width 2
 height 2
-initializing food with id:  SQJ597
+initializing food with id:  JEW6B9
 type 2
 coordinates: (62, 62)
 width 2
 height 2
-initializing food with id:  ABQ70V
+initializing food with id:  9DAN05
 type 2
 coordinates: (65, 65)
 width 2
 height 2
-initializing food with id:  DYJOWB
+initializing food with id:  S6ZPVI
 type 2
 coordinates: (68, 68)
 width 2
 height 2
-initializing food with id:  B19TRH
+initializing food with id:  WV8QVW
 type 2
 coordinates: (71, 71)
 width 2
 height 2
-initializing food with id:  ULHGOS
+initializing food with id:  HLHJWN
 type 2
 coordinates: (74, 74)
 width 2
 height 2
-initializing food with id:  M3BS71
+initializing food with id:  7R0YMJ
 type 2
 coordinates: (77, 77)
 width 2
 height 2
-initializing food with id:  483O4P
+initializing food with id:  34MOIQ
 type 2
 coordinates: (80, 80)
 width 2
 height 2
-initializing food with id:  3YYAAK
+initializing food with id:  R4JE37
 type 2
 coordinates: (83, 83)
 width 2
 height 2
-initializing food with id:  K6FHSE
+initializing food with id:  TTO50R
 type 2
 coordinates: (86, 86)
 width 2
 height 2
-initializing food with id:  7Y892R
+initializing food with id:  Z88DBQ
 type 2
 coordinates: (89, 89)
 width 2
 height 2
-initializing food with id:  2U86XL
+initializing food with id:  6G6Z7C
 type 2
 coordinates: (92, 92)
 width 2
 height 2
-initializing food with id:  QJ6STZ
+initializing food with id:  8QAQEL
 type 2
 coordinates: (95, 95)
 width 2
 height 2
-initializing food with id:  38GGQY
+initializing food with id:  VGIVSP
 type 2
 coordinates: (98, 98)
 width 2
 height 2
-initializing wall with id:  0V5LEY
+initializing wall with id:  NCLQJF
 type 3
 coordinates: (0, 0)
 width 200
 height 5
-initializing wall with id:  Q03OZI
+initializing wall with id:  508N4J
 type 3
 coordinates: (0, 0)
 width 5
 height 500
-initializing wall with id:  13PAR9
+initializing wall with id:  17VH40
 type 3
 coordinates: (0, 495)
 width 500
 height 5
-initializing wall with id:  YWSNRD
+initializing wall with id:  R66WBI
 type 3
 coordinates: (195, 0)
 width 5
 height 500
-initializing agent with id:  6H0A0Z
+initializing agent with id:  ENLOX8
 type 1
 coordinates: (80, 50)
 width 5
 height 5
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.29110453]), array([0.60437396]))
 Frame 0
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 1
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 2
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 3
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 4
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 5
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 6
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 7
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 8
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 9
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 10
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 11
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 12
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 13
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 14
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 15
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 16
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 17
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 18
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 19
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 20
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 21
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 22
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 23
-agent 6H0A0Z changed position by: (-1, 0)
-food MY9JNC eaten
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 24
-agent 6H0A0Z changed position by: (-1, 0)
-food MY9JNC eaten
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 25
-agent 6H0A0Z changed position by: (-1, 0)
-food MY9JNC eaten
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 26
-agent 6H0A0Z changed position by: (-1, 0)
-food OZ5BCJ eaten
-food MY9JNC eaten
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 27
-agent 6H0A0Z changed position by: (-1, 0)
-food OZ5BCJ eaten
-food MY9JNC eaten
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 28
-agent 6H0A0Z changed position by: (-1, 0)
-food OZ5BCJ eaten
-food MY9JNC eaten
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 29
-agent 6H0A0Z changed position by: (-1, 0)
-food OZ5BCJ eaten
-food MY9JNC eaten
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 30
-agent 6H0A0Z changed position by: (-1, 0)
-food OZ5BCJ eaten
-food MY9JNC eaten
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 31
-agent 6H0A0Z changed position by: (-1, 0)
-food OZ5BCJ eaten
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 32
-agent 6H0A0Z changed position by: (-1, 0)
-food OZ5BCJ eaten
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 33
-agent 6H0A0Z changed position by: (-1, 0)
-food OZ5BCJ eaten
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 34
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 35
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 36
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 37
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 38
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 39
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 40
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 41
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 42
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 43
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 44
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 45
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 46
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 47
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 48
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 49
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 50
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 51
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 52
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 53
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 54
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 55
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 56
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 57
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 58
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 59
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 60
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 61
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 62
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 63
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 64
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 65
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 66
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 67
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 68
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 69
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 70
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 71
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 72
-agent 6H0A0Z changed position by: (-1, 0)
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 73
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 74
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 75
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 76
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 77
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 78
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 79
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 80
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 81
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 82
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 83
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 84
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 85
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 86
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 87
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 88
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 89
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 90
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 91
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 92
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 93
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 94
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 95
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 96
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 97
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 98
-agent 6H0A0Z changed position by: (-1, 0)
-agent 6H0A0Z collided with a wall, ignore change_position
+agent ENLOX8 c_pos: (array([0.25313409]), array([0.69432372]))
 Frame 99

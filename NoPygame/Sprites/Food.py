@@ -29,8 +29,9 @@ class Food():
             display[self.y:self.y+self.rect.shape[1], self.x:self.x+self.rect.shape[0]] = self.type
 
     def eat(self):
-        log("food", self.id, "eaten")
-        self.eaten = True
+        if not self.eaten:
+            log("food", self.id, "eaten")
+            self.eaten = True
 
     def update(self):
         return 0

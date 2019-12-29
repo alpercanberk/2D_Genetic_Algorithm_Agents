@@ -1,14 +1,15 @@
 import numpy as np
-import pygame
 import skimage.measure
 
+import matplotlib.pyplot as plt
+
 class SquareSensor():
-        def __init__(self, display, agent_size, sight_radius, maxpooling_filter_size):
+        def __init__(self, display, agent_size, sight_radius, maxpooling_filter_size, type_dict):
 
             self.maxpooling_filter_size = maxpooling_filter_size
             self.sight_radius = sight_radius
 
-            x,y = pygame.display.get_surface().get_size()
+            x,y = display.shape
 
             self.x = x/2
             self.y = y/2
@@ -17,14 +18,24 @@ class SquareSensor():
 
             self.agent_size = agent_size
 
+            self.type_dict = type_dict
+
         def get_sight(self):
-            display_copy = self.display.copy()
-            sight = display_copy.subsurface(self.x - self.sight_radius,
-                                      self.y - self.sight_radius,
-                                      2*self.sight_radius + self.agent_size,
-                                      2*self.sight_radius + self.agent_size)
-            # sight = display_copy.subsurface(0,0,50,50)
-            sight3d = np.array(pygame.surfarray.pixels3d(sight))
+
+            left = int(self.x - self.sight_radius)
+            right = int(left + 2*self.sight_radius + self.agent_size)
+
+            up = int(self.y - self.sight_radius)
+            down = int(up + self.agent_size + 2*self.sight_radius)
+
+            sight = self.display[left:right, up:down]
+
+            sight3d = np.zeros((sight.shape[0], sight.shape[1], len(self.type_dict.keys())))
+
+
+            for x in range(sight.shape[0]):
+                for y in range(sight.shape[1]):
+                    sight3d[x, y, int(sight[x, y])] = 1
 
             color_slices = []
             for array_slice in np.rollaxis(sight3d, 2):
@@ -40,7 +51,6 @@ class SquareSensor():
             sight_array = sight_array / np.linalg.norm(sight_array)
 
             #for debug purposes
-            pygame.image.save(sight, "sight.jpg")
             return sight_array
 
         def get_output_shape(self):

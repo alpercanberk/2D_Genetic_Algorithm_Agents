@@ -1,6 +1,6 @@
 
 import numpy as np
-from Primitives import *
+from Utils import *
 
 class Wall():
     def __init__(self, type, width, height, init_coordinates):

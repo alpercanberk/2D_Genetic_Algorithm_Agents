@@ -1,6 +1,6 @@
 
 import numpy as np
-from Primitives import *
+from Utils import *
 
 class Food():
 

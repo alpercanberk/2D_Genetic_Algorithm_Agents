@@ -1,6 +1,6 @@
 
 import numpy as np
-from Primitives import *
+from Utils import *
 
 class SquareAgent():
 
@@ -14,16 +14,13 @@ class SquareAgent():
 
         self.rect = rectangle(self.size, self.size, self.type)
 
-        self.prev_x = None
-        self.prev_y = None
-
         self.change_x = -1
         self.change_y = 0
 
         self.walls = walls
         self.feed = feed
 
-        self.score = 0
+        self.fitness = 0
 
         self.id = generate_random_id()
 
@@ -47,11 +44,8 @@ class SquareAgent():
 
         self.activations = self.brain.make_decision()
 
-        self.change_x = self.activations[0] - self.activations[1]
-        self.change_y = self.activations[2] - self.activations[3]
-
-        self.x += self.change_x
-        self.y += self.change_y
+        self.change_x = float(self.activations[0] - self.activations[1])
+        self.change_y = float(self.activations[2] - self.activations[3])
 
         log("agent", self.id, "c_pos:", (self.change_x, self.change_y))
 
@@ -63,22 +57,36 @@ class SquareAgent():
         self.set_sight_position()
         self.move()
 
+        self.x += self.change_x
+
         for wall in self.walls:
-            if does_intersect_2d(self.x, self.y, self.size, self.size,
-                                 wall.x, wall.y, wall.rect.shape[0], wall.rect.shape[1]):
-                log("agent", self.id, "ignore c_pos")
+            intersection = does_intersect_2d(self.x, self.y, self.size, self.size,
+                                 wall.x, wall.y, wall.rect.shape[0], wall.rect.shape[1])
+            if intersection:
+                log("agent", self.id, "ignore horizontal c_pos")
                 if self.change_x < 0:
                     self.x = wall.rect.shape[0]
-                if self.change_x > 0:
+                else:
                     self.x = wall.x-self.size
+
+
+        self.y += self.change_y
+
+        for wall in self.walls:
+            intersection = does_intersect_2d(self.x, self.y, self.size, self.size,
+                                 wall.x, wall.y, wall.rect.shape[0], wall.rect.shape[1])
+            if(intersection):
+                log("agent", self.id, "ignore vertical c_pos")
                 if self.change_y > 0:
                     self.y = wall.y-self.size
-                if self.change_y < 0:
+                else:
                     self.y = wall.rect.shape[1]
+
+
 
         for food in self.feed:
             if does_intersect_2d(self.x, self.y, self.size, self.size,
                                  food.x, food.y, food.rect.shape[0], food.rect.shape[1]):
                 if not food.eaten:
-                    self.score += 1
+                    self.fitness += 1
                     food.eat()

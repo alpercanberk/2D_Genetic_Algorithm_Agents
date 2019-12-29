@@ -13,20 +13,21 @@ def line_overlap_2d(l1,r1,l2,r2):
 
     rightmost_index = 2
 
-    if(r1 >= r2):
+    if(r1 > r2):
         rightmost_index = 1
 
     if(rightmost_index == 2):
-        if(r1 >= l2):
+        if(r1 > l2):
             return True
 
     if(rightmost_index == 1):
-        if(r2 >= l1):
+        if(r2 > l1):
             return True
 
     return False
 
 def does_intersect_2d(x1, y1, width1, height1, x2, y2, width2, height2):
+    intersection_type = []
     if(line_overlap_2d(x1, x1+width1, x2, x2+width2) and line_overlap_2d(y1, y1+height1, y2, y2+height2)):
         return True
     return False

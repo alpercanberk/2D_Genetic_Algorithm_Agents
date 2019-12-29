@@ -28,10 +28,16 @@ class SquareSensor():
             up = int(self.y - self.sight_radius)
             down = int(up + self.agent_size + 2*self.sight_radius)
 
+            print(up,down,left,right, "udlr")
+            print(self.display.shape)
+            print(down-up, "down-up")
+            print(self.display[left:right, 10:25].shape, "dummy shape")
+
             sight = self.display[left:right, up:down]
 
-            sight3d = np.zeros((sight.shape[0], sight.shape[1], len(self.type_dict.keys())))
+            print(sight.shape, "sight shape")
 
+            sight3d = np.zeros((sight.shape[0], sight.shape[1], len(self.type_dict.keys())))
 
             for x in range(sight.shape[0]):
                 for y in range(sight.shape[1]):

@@ -49,5 +49,3 @@ def log(*args):
 
 def clear_log():
     f.truncate(0)
-
-# print(does_intersect_2d(0,0,10,30,10,10,10,10))

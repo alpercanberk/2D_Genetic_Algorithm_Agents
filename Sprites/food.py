@@ -1,17 +1,37 @@
-import pygame
 
-RED = (255, 0, 0)
+import numpy as np
+from Utils import *
 
-class Food(pygame.sprite.Sprite):
+class Food():
 
-    def __init__(self, x, y, size):
+    def __init__(self, type, size ,init_coordinates):
 
-        super().__init__()
+        self.size = size
+        self.type = type
 
-        self.image = pygame.Surface([size, size])
-        self.image.fill(RED)
+        self.x = init_coordinates[0]
+        self.y = init_coordinates[1]
 
-        # Make our top-left corner the passed-in location.
-        self.rect = self.image.get_rect()
-        self.rect.y = y
-        self.rect.x = x
+        self.rect = rectangle(self.size, self.size, self.type)
+
+        self.eaten = False
+
+        self.id = generate_random_id()
+
+        log("initializing food with id: ", self.id)
+        log("type", self.type)
+        log("coordinates:", (self.x, self.y))
+        log("width", self.size)
+        log("height", self.size)
+
+    def render(self, display):
+        if not self.eaten:
+            display[self.y:self.y+self.rect.shape[1], self.x:self.x+self.rect.shape[0]] = self.type
+
+    def eat(self):
+        if not self.eaten:
+            log("food", self.id, "eaten")
+            self.eaten = True
+
+    def update(self):
+        return 0

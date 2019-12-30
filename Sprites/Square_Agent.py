@@ -47,7 +47,7 @@ class SquareAgent():
         self.change_x = float(self.activations[0] - self.activations[1])
         self.change_y = float(self.activations[2] - self.activations[3])
 
-        log("agent", self.id, "c_pos:", (self.change_x, self.change_y))
+        log("c_pos agent",self.id, (self.change_x, self.change_y))
 
     def set_sight_position(self):
         self.brain.sensor.set_sight_position(self.x, self.y)

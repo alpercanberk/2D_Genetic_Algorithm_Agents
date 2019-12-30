@@ -28,12 +28,8 @@ def generate_uniform_coordinates(screen_width, screen_height, wall_thickness, ma
     up = wall_thickness + margin
     down = screen_height - wall_thickness - margin
 
-    print(left,right,up,down)
-
     x_interval = (right-left)/density
     y_interval = (down-up)/density
-
-    print(x_interval, y_interval)
 
     for x in range(int(left), int(right-x_interval), int(x_interval)):
         for y in range(int(up), int(down-y_interval), int(y_interval)):
@@ -76,7 +72,7 @@ num_steps = 200
 
 screen_width = 200
 screen_height = 500
-wall_thickness = 20
+wall_thickness = 30
 
 type_dict = {
     0:"none",
@@ -85,9 +81,11 @@ type_dict = {
     3:"wall"
 }
 
+inv_type_dict = dict([[v,k] for k,v in type_dict.items()])
+
 agent_size = 5
-sight_radius = 5
-maxpooling_filter_size = 4
+sight_radius = 20
+maxpooling_filter_size = 9
 
 food_size = 2
 food_density = 10
@@ -145,7 +143,6 @@ class SimulationWithML():
 
         for i in range(0, len(agent_coordinates)):
 
-            print(agent_coordinates[i])
             sensor = SquareSensor(self.simulation.display,
                                   agent_size,
                                   sight_radius,
@@ -175,5 +172,5 @@ class SimulationWithML():
             self.simulation.add_sprite(agent)
 
     def get_fitness(self):
-        self.simulation.run(num_steps, True)
+        self.simulation.run(num_steps)
         return self.simulation.get_fitness(inv_type_dict["agent"])

@@ -1,101 +1,62 @@
-import pygame
-import random
+
 import numpy as np
-import math
-
 import sys
+import time
+
 sys.path.insert(1, './Sprites')
-from wall import Wall
-from food import Food
-from agent import Agent
+from Utils import *
 
-from Neural_Network import *
-from Agent_Brain import *
-from Sensors import *
-
-BLACK = (0, 0, 0)
-WHITE = (255, 255, 255)
-BLUE = (50, 50, 255)
-RED = (255, 0, 0)
-GREEN = (0, 255, 0)
-
-DEFAULT_FOOD_SIZE = 3
-DEFAULT_AGENT_SIZE = 5
-
-def default_fitness_metric(self):
-    return self.fitness
+import matplotlib.pyplot as plt
+plt.ion()
 
 class Simulation():
 
-    def __init__(self,
-                 display,
-                 food_size=DEFAULT_FOOD_SIZE,
-                 agent_size=DEFAULT_AGENT_SIZE,
-                 ):
+    def __init__(self, screen_width, screen_height, type_dict):
 
-        self.screen_width, self.screen_height = pygame.display.get_surface().get_size()
+        self.display = np.zeros((screen_width, screen_height))
+        self.all_sprites = []
 
-        self.wall_list = pygame.sprite.Group()
-        self.feed_list = pygame.sprite.Group()
-        self.agent_list = []
-        self.all_sprites_list = pygame.sprite.Group()
+        clear_log()
 
-        #this class can only create food and agents in one size
-        self.food_size = food_size
-        self.agent_size = agent_size
-        self.display = display
+        log("screen_size")
+        log("width", screen_width)
+        log("height", screen_height)
 
-    def create_wall(self, x, y, wall_width, wall_height, color):
+        log("type dict:")
+        for key in type_dict.keys():
+            log(type_dict[key], key)
 
-        new_wall = Wall(x, y, wall_width, wall_height, color)
-        self.wall_list.add(new_wall)
-        self.all_sprites_list.add(new_wall)
+        self.visualize=False
 
-    def generate_food(self, coordinate):
+    def add_sprite(self, object):
+        self.all_sprites.append(object)
 
-        new_food = Food(coordinate[0], coordinate[1], self.food_size)
-        self.feed_list.add(new_food)
-        self.all_sprites_list.add(new_food)
+    def render_screen(self):
 
-    def generate_agent(self,
-                     coordinate,
-                     brain,
-                     fitness_metric=default_fitness_metric):
+        for sprite in self.all_sprites:
+            sprite.render(self.display)
 
-        new_agent = Agent(brain,
-                          coordinate[0],
-                          coordinate[1],
-                          self.agent_size)
-        new_agent.fitness_metric = fitness_metric
-        new_agent.wall_list = self.wall_list
-        new_agent.feed_list = self.feed_list
-        self.agent_list.append(new_agent)
-        self.all_sprites_list.add(new_agent)
+        if self.visualize:
+            plt.close()
+            plt.matshow(self.display)
+            plt.show()
+            plt.pause(0.001)
 
-    def run_game(self, max_steps):
+    def update_sprites(self):
+        for sprite in self.all_sprites:
+            sprite.update()
 
-        all_sprite_list = self.all_sprites_list
+    def run(self, num_steps, visualize = False):
 
-        step_count = 0
-        done = False
-        while done is not True:
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    done = True
+        if visualize:
+            self.visualize = True
 
-            if(step_count > max_steps):
-                done = True
+        for i in range(0, num_steps):
+            log("Frame", i)
+            self.render_screen()
+            self.update_sprites()
+            if not (i == num_steps):
+                self.display = np.zeros((self.display.shape[0], self.display.shape[1]))
 
-            self.display.fill(BLACK)
-
-            all_sprite_list.draw(self.display)
-
-            all_sprite_list.update()
-            pygame.display.update()
-
-            # clock.tick(60)
-
-            step_count += 1
-
-    def get_fitness(self):
-        return [agent.fitness_metric() for agent in self.agent_list]
+    def get_fitness(self, type):
+        return [agent.fitness_metric() for agent in self.all_sprites if agent.type == type]

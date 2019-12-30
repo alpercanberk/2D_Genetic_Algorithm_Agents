@@ -1,5 +1,4 @@
 import numpy as np
-import pygame
 
 def calculate_num_weights(layers):
     num_weights = 0
@@ -39,8 +38,6 @@ class AgentBrain():
 
             previous_weight_length = 0
 
-            print(layer_shapes, "layer_shapes\n")
-
             for width, height in layer_shapes:
                 weight_length = width*height
 
@@ -48,7 +45,6 @@ class AgentBrain():
                 previous_weight_length = weight_length+previous_weight_length
 
             for i in range(0, len(flat_weights)):
-                print(layer_shapes[i][0], layer_shapes[0][1], "shapes")
                 self.weights.append(flat_weights[i].reshape(layer_shapes[i][1], layer_shapes[i][0]))
 
         else:

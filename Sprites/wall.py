@@ -1,15 +1,28 @@
-import pygame
 
-class Wall(pygame.sprite.Sprite):
-    """ Wall the player can run into. """
-    def __init__(self, x, y, width, height, color):
-        """ Constructor for the wall that the player can run into. """
-        # Call the parent's constructor
-        super().__init__()
+import numpy as np
+from Utils import *
 
-        self.image = pygame.Surface([width, height])
-        self.image.fill(color)
+class Wall():
+    def __init__(self, type, width, height, init_coordinates):
 
-        self.rect = self.image.get_rect()
-        self.rect.y = y
-        self.rect.x = x
+        self.type = type
+
+        self.x = init_coordinates[0]
+        self.y = init_coordinates[1]
+
+        self.rect = rectangle(width, height, self.type)
+
+        self.id = generate_random_id()
+
+        log("initializing wall with id: ", self.id)
+        log("type", self.type)
+        log("coordinates:", (self.x, self.y))
+        log("width", width)
+        log("height", height)
+
+
+    def render(self, display):
+        display[self.y:self.y+self.rect.shape[1], self.x:self.x+self.rect.shape[0]] = self.type
+
+    def update(self):
+        return 0

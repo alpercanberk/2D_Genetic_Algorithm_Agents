@@ -6,9 +6,11 @@ from random import choice, randint
 # please don't sue me :)
 
 
-def cal_pop_fitness(pop):
+def cal_pop_fitness(pop, visualize=False):
     # calculating the fitness value by playing a game with the given weights in chromosome
     sim = SimulationWithML(pop)
+    if visualize:
+        sim.visualize = True
     fit = sim.get_fitness()
     print('fitness values of chromosomes from this generation:', str(fit))
     fitness_array = np.array(fit)

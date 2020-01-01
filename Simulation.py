@@ -7,6 +7,9 @@ sys.path.insert(1, './Sprites')
 from Utils import *
 
 import matplotlib.pyplot as plt
+from pylab import rcParams
+rcParams['figure.figsize'] = 7,6
+
 plt.ion()
 
 class Simulation():
@@ -45,6 +48,9 @@ class Simulation():
     def update_sprites(self):
         for sprite in self.all_sprites:
             sprite.update()
+
+    def collect_coordinates(self, type, condition=(lambda x: True)):
+        return [(sprite.x, sprite.y) for sprite in self.all_sprites if sprite.type == type and condition(sprite)]
 
     def run(self, num_steps, visualize = False):
 

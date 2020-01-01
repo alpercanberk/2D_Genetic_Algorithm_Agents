@@ -14,7 +14,7 @@ def sigmoid(z):
     return s
 
 
-def forward_propagation(weights, X):
+def forward_propagation(weights, biases, X):
     #my cheesy maxpooling doesn't work without this
     #Add a randomizer neuron to prevent agents getting stuck
     #still not sure if it work. Could be research paper material though.
@@ -25,10 +25,9 @@ def forward_propagation(weights, X):
     #no i'm not storing activations, this is not backprop
     processed_data = X.reshape(1, X.shape[0]).T
 
-
-    for W in weights:
-        Z = np.matmul(W, processed_data)
-        A = np.tanh(Z)
+    for i in range(len(weights)):
+        Z = np.matmul(weights[i], processed_data)
+        A = np.tanh(Z + biases[i].reshape(biases[i].shape[0], 1))
         processed_data = A
 
     return processed_data

@@ -2,10 +2,11 @@
 import random
 import math
 
-from Sensors import SquareSensor
 from Neural_Network import *
 from Agent_Brain import *
 from Simulation import Simulation
+
+from Simulation_Settings import *
 
 sys.path.insert(1, './Sprites')
 
@@ -14,152 +15,60 @@ from Wall import Wall
 from Food import Food
 from Square_Agent import SquareAgent
 
-def default_fitness_metric(self):
-    return self.fitness
-
-#example simulation
-
-def generate_uniform_coordinates(screen_width, screen_height, wall_thickness, margin, density):
-
-    coordinates = []
-
-    left = wall_thickness + margin
-    right = screen_width - wall_thickness - margin
-    up = wall_thickness + margin
-    down = screen_height - wall_thickness - margin
-
-    x_interval = (right-left)/density
-    y_interval = (down-up)/density
-
-    for x in range(int(left), int(right-x_interval), int(x_interval)):
-        for y in range(int(up), int(down-y_interval), int(y_interval)):
-            randx = random.randrange(x, x+x_interval)
-            randy = random.randrange(y, y+y_interval)
-            coordinates.append((randx, randy))
-
-    return coordinates
-
-def dist(p1, p2):
-    return math.sqrt((p1[0]-p2[0])**2 + (p1[1]-p2[1])**2)
-
-def generate_agent_coordinates(screen_width, screen_height, wall_thickness, margin, n_agents, min_dist):
-
-    left = wall_thickness + margin
-    right = screen_width - wall_thickness - margin
-    up = wall_thickness + margin
-    down = screen_height - wall_thickness - margin
-
-    agent_coordinates = []
-
-    while(len(agent_coordinates) < n_agents):
-        randx = random.randrange(left, right)
-        randy = random.randrange(up, down)
-        new_point = (randx, randy)
-        #generates coordinates until every agent is a dist apart from each other, this might get stuck if you set n too big
-        #or dist too big, sorry.
-        while(True in [dist(new_point, old_point) < min_dist for old_point in agent_coordinates]):
-            randx = random.randrange(left, right)
-            randy = random.randrange(up, down)
-            new_point = (randx, randy)
-
-        agent_coordinates.append(new_point)
-
-    return agent_coordinates
-
-
-
-num_steps = 200
-
-screen_width = 200
-screen_height = 500
-wall_thickness = 30
-
-type_dict = {
-    0:"none",
-    1:"agent",
-    2:"food",
-    3:"wall"
-}
-
-inv_type_dict = dict([[v,k] for k,v in type_dict.items()])
-
-agent_size = 5
-sight_radius = 20
-maxpooling_filter_size = 9
-
-food_size = 2
-food_density = 10
-
-agent_dist = 5
-
 
 class SimulationWithML():
 
-    dummy_simulation = Simulation(screen_height, screen_width, type_dict)
-    dummy_sensor = SquareSensor(dummy_simulation.display,
-                          agent_size,
-                          sight_radius,
-                          maxpooling_filter_size,
-                          type_dict)
-
+    #only required so that the shapes of the weights can be initialized properly
     dummy_brain = AgentBrain(
-        display = dummy_simulation.display,
-        sensor = dummy_sensor,
+        simulation = None,
         neural_network = forward_propagation,
-        layer_sizes = [4,4,4]
+        layer_sizes = LAYER_SIZES,
+        type_dict = None
     )
     required_num_weights = dummy_brain.num_weights
+    required_num_biases = dummy_brain.num_biases
 
     def __init__(self, weights):
 
-        inv_type_dict = dict(map(reversed, type_dict.items()))
+        self.visualize = False
 
-        self.simulation = Simulation(screen_height, screen_width, type_dict)
+        self.simulation = Simulation(SCREEN_HEIGHT, SCREEN_WIDTH, TYPE_DICT)
 
         feed = []
-
-        food_coordinates = generate_uniform_coordinates(screen_width, screen_height, wall_thickness, wall_thickness, food_density)
+        food_coordinates = generate_uniform_coordinates(SCREEN_WIDTH, SCREEN_HEIGHT, WALL_THICKNESS, WALL_THICKNESS*(1/2), FOOD_DENSITY)
         for coordinate in food_coordinates:
-            food = Food(inv_type_dict["food"], food_size, [coordinate[0], coordinate[1]])
+            food = Food(TYPE_DICT["food"], FOOD_SIZE, [coordinate[0], coordinate[1]])
             self.simulation.add_sprite(food)
             feed.append(food)
 
         walls = []
-        walls.append(Wall(inv_type_dict["wall"], screen_width, wall_thickness,[0,0]))
-        walls.append(Wall(inv_type_dict["wall"], wall_thickness, screen_height,[0,0]))
-        walls.append(Wall(inv_type_dict["wall"], screen_height, wall_thickness,[0,screen_height-wall_thickness]))
-        walls.append(Wall(inv_type_dict["wall"], wall_thickness, screen_height,[screen_width-wall_thickness,0]))
+        walls.append(Wall(TYPE_DICT["wall"], SCREEN_WIDTH, WALL_THICKNESS,[0,0]))
+        walls.append(Wall(TYPE_DICT["wall"], WALL_THICKNESS, SCREEN_HEIGHT,[0,0]))
+        walls.append(Wall(TYPE_DICT["wall"], SCREEN_HEIGHT, WALL_THICKNESS,[0,SCREEN_HEIGHT-WALL_THICKNESS]))
+        walls.append(Wall(TYPE_DICT["wall"], WALL_THICKNESS, SCREEN_HEIGHT,[SCREEN_WIDTH-WALL_THICKNESS,0]))
         for wall in walls:
             self.simulation.add_sprite(wall)
 
-        SquareAgent.fitness_metric = default_fitness_metric
-
-        agent_coordinates = generate_agent_coordinates(screen_width,
-                                                       screen_height,
-                                                       wall_thickness,
-                                                       wall_thickness,
+        agent_coordinates = generate_agent_coordinates(SCREEN_WIDTH,
+                                                       SCREEN_HEIGHT,
+                                                       WALL_THICKNESS,
+                                                       WALL_THICKNESS,
                                                        weights.shape[0],
-                                                       agent_dist)
+                                                       MIN_AGENT_DIST)
 
         for i in range(0, len(agent_coordinates)):
 
-            sensor = SquareSensor(self.simulation.display,
-                                  agent_size,
-                                  sight_radius,
-                                  maxpooling_filter_size,
-                                  type_dict)
-
             brain = AgentBrain(
-                display = self.simulation.display,
-                sensor = sensor,
+                simulation = self.simulation,
                 neural_network = forward_propagation,
-                layer_sizes = [4,4,4]
+                layer_sizes = LAYER_SIZES,
+                type_dict = TYPE_DICT
             )
 
             brain.set_weights(weights[i,:])
 
-            agent = SquareAgent(type=inv_type_dict["agent"],
-                                size=5,
+            agent = SquareAgent(type=TYPE_DICT["agent"],
+                                size=AGENT_SIZE,
                                 init_coordinates=agent_coordinates[i],
                                 walls=walls,
                                 feed=feed
@@ -172,5 +81,5 @@ class SimulationWithML():
             self.simulation.add_sprite(agent)
 
     def get_fitness(self):
-        self.simulation.run(num_steps)
-        return self.simulation.get_fitness(inv_type_dict["agent"])
+        self.simulation.run(NUM_STEPS_PER_GAME, self.visualize)
+        return self.simulation.get_fitness(TYPE_DICT["agent"])

@@ -14,7 +14,7 @@ class SquareAgent():
 
         self.rect = rectangle(self.size, self.size, self.type)
 
-        self.change_x = -1
+        self.change_x = 0
         self.change_y = 0
 
         self.walls = walls
@@ -25,6 +25,8 @@ class SquareAgent():
         self.id = generate_random_id()
 
         self.brain = None
+
+        self.v = 2
 
         log("initializing agent with id: ", self.id)
         log("type", self.type)
@@ -47,14 +49,24 @@ class SquareAgent():
         self.change_x = float(self.activations[0] - self.activations[1])
         self.change_y = float(self.activations[2] - self.activations[3])
 
+        try:
+            normalizing_constant = math.sqrt(self.change_x ** 2 + self.change_y ** 2) * (1/self.v)
+            self.change_x /= normalizing_constant
+            self.change_y /= normalizing_constant
+        except:
+            pass
+
         log("c_pos agent",self.id, (self.change_x, self.change_y))
 
-    def set_sight_position(self):
-        self.brain.sensor.set_sight_position(self.x, self.y)
+    def set_brain_position(self):
+        self.brain.set_brain_position(self.x, self.y)
+
+    def fitness_metric(self):
+        return self.fitness
 
     def update(self):
 
-        self.set_sight_position()
+        self.set_brain_position()
         self.move()
 
         self.x += self.change_x

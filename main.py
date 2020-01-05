@@ -9,7 +9,6 @@ from Simulation_Settings import *
 sys.path.insert(1, './Sprites')
 from Utils import log
 
-
 figure = plt.figure()
 
 plt.xlabel('Generation #')

@@ -14,7 +14,7 @@ plt.ion()
 
 class Simulation():
 
-    def __init__(self, screen_width, screen_height, type_dict):
+    def __init__(self, screen_width, screen_height):
 
         self.display = np.zeros((screen_width, screen_height))
         self.all_sprites = []
@@ -25,13 +25,14 @@ class Simulation():
         log("width", screen_width)
         log("height", screen_height)
 
-        log("type dict:")
-        for key in type_dict.keys():
-            log(type_dict[key], key)
-
-        self.visualize=False
+        self.visualize = False
+        self.walls = []
 
     def add_sprite(self, object):
+        self.all_sprites.append(object)
+
+    def add_wall(self, object):
+        self.walls.append(object)
         self.all_sprites.append(object)
 
     def render_screen(self):
@@ -48,6 +49,9 @@ class Simulation():
     def update_sprites(self):
         for sprite in self.all_sprites:
             sprite.update()
+
+    def collect_sprites(self, type, condition=(lambda x: True)):
+        return [sprite for sprite in self.all_sprites if sprite.type == type and condition(sprite)]
 
     def collect_coordinates(self, type, condition=(lambda x: True)):
         return [(sprite.x, sprite.y) for sprite in self.all_sprites if sprite.type == type and condition(sprite)]

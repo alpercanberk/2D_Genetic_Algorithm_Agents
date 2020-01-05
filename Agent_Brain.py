@@ -4,23 +4,17 @@ import math
 
 sys.path.insert(1, './Sprites')
 from Utils import *
-
+from Sprite import SpriteType
 
 class AgentBrain():
 
     def __init__(self,
-                 simulation,
+                 agent,
                  neural_network,
                  layer_sizes,
-                 type_dict
                  ):
 
-        self.simulation = simulation
-        self.type_dict = type_dict
-
-        self.x = 0
-        self.y = 0
-        self.food_coordinates = [[0,0]]
+        self.agent = agent
 
         self.input_size = self.get_output_shape()
         self.layer_sizes = list(layer_sizes)
@@ -33,7 +27,6 @@ class AgentBrain():
         self.biases = []
 
         self.neural_network = neural_network
-
 
     def set_weights(self, weights):
 
@@ -67,27 +60,22 @@ class AgentBrain():
                   please input", self.num_weights, "weights")
 
     def get_sight(self):
-        nearest_food = closest_point((self.x, self.y), self.food_coordinates)
-        dist_from_nearest_food = math.sqrt((self.x-nearest_food[0])**2 + (self.y-nearest_food[1])**2)
+        if self.agent:
+            nearest_food = closest_point((self.agent.x, self.agent.y), self.agent.simulation.collect_coordinates(SpriteType.FOOD, lambda food: food.eaten == False))
+            dist_from_nearest_food = math.sqrt((self.agent.x-nearest_food[0])**2 + (self.agent.y-nearest_food[1])**2)/100
 
-        try:
-            angle_to_the_nearest_food = math.atan((self.y-nearest_food[1])/(self.x-nearest_food[0]))
-        except:
-            angle_to_the_nearest_food = math.pi/2
+            try:
+                angle_to_the_nearest_food = math.atan((self.agent.y-nearest_food[1])/(self.agent.x-nearest_food[0]))
+            except:
+                angle_to_the_nearest_food = np.pi/2
 
-        return np.array((dist_from_nearest_food, angle_to_the_nearest_food))
+            return np.array((dist_from_nearest_food, float(self.agent.direction - angle_to_the_nearest_food)))
+        else:
+            return np.array([0,0])
 
     def get_output_shape(self):
         return self.get_sight().shape[0]
 
-    def set_brain_position(self, x, y):
-        self.x = x
-        self.y = y
-
-    def set_food_coordinates(self, food_coordinates):
-        self.food_coordinates = food_coordinates
-
     def make_decision(self):
-        self.set_food_coordinates(self.simulation.collect_coordinates(self.type_dict["food"], lambda food: food.eaten == False))
         decision = self.neural_network(self.weights, self.biases, self.get_sight())
         return decision

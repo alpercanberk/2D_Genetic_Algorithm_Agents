@@ -2,12 +2,14 @@
 import numpy as np
 from Utils import *
 
-class Food():
+from Sprite import Sprite, SpriteType
 
-    def __init__(self, type, size ,init_coordinates):
+class Food(Sprite):
+
+    def __init__(self, size, init_coordinates):
 
         self.size = size
-        self.type = type
+        self.type = SpriteType.FOOD
 
         self.x = init_coordinates[0]
         self.y = init_coordinates[1]
@@ -32,6 +34,3 @@ class Food():
         if not self.eaten:
             log("food", self.id, "eaten")
             self.eaten = True
-
-    def update(self):
-        return 0

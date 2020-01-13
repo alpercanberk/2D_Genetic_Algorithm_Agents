@@ -106,10 +106,12 @@ def generate_agent_coordinates(screen_width, screen_height, wall_thickness, marg
         #generates coordinates until every agent is a dist apart from each other, this might get stuck if you set n too big
         #or dist too big, sorry.
         while(True in [dist(new_point, old_point) < min_dist for old_point in agent_coordinates]):
+            print('LOOPING')
             randx = random.randrange(left, right)
             randy = random.randrange(up, down)
             new_point = (randx, randy)
 
         agent_coordinates.append(new_point)
+        # agent_coordinates.append([screen_width/2, screen_height/2])
 
     return agent_coordinates

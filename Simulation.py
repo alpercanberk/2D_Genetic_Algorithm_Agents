@@ -8,7 +8,7 @@ from Utils import *
 
 import matplotlib.pyplot as plt
 from pylab import rcParams
-rcParams['figure.figsize'] = 7,6
+rcParams['figure.figsize'] = 10,10
 
 plt.ion()
 

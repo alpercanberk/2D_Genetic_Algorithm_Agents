@@ -93,7 +93,7 @@ class SquareAgent(Sprite):
                 else:
                     self.y = wall.rect.shape[1]
 
-
+        self.distance_traveled += np.sqrt(self.change_x**2 + self.change_y**2)
 
         for food in feed:
             if does_intersect_2d(self.x, self.y, self.size, self.size,

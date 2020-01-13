@@ -69,6 +69,22 @@ class AgentBrain():
             except:
                 angle_to_the_nearest_food = np.pi/2
 
+            # display = self.agent.simulation.display
+            #
+            # wall_right = 0
+            # wall_left = 0
+            # wall_top = 0
+            # wall_bottom = 0
+            #
+            # if SpriteType.WALL in display[self.agent.x+1: self.agent.x+10, self.agent.y]:
+            #     wall_right = 1
+            # if SpriteType.WALL in display[self.agent.x-10: self.agent.x, self.agent.y]:
+            #     wall_left = 1
+            # if SpriteType.WALL in display[self.agent.x, self.agent.y:self.agent.y+10]:
+            #     wall_top = 1
+            # if SpriteType.WALL in display[self.agent.x, self.agent.y-10:self.agent.y]:
+            #     wall_bottom = 1
+
             return np.array((dist_from_nearest_food, float(self.agent.direction - angle_to_the_nearest_food)))
         else:
             return np.array([0,0])

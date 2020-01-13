@@ -1,7 +1,7 @@
 from Simulation_With_ML import *
 from random import choice, randint
 
-
+from Simulation_Settings import MUTATION_RATE
 # I copied some of this code from https://github.com/TheAILearner/Training-Snake-Game-With-Genetic-Algorithm/blob/master/Genetic_Algorithm.py
 # please don't sue me :)
 
@@ -12,7 +12,7 @@ def cal_pop_fitness(pop, visualize=False):
     if visualize:
         sim.visualize = True
     fit = sim.get_fitness()
-    print('fitness values of chromosomes from this generation:', str(fit))
+    print('fitness values of chromosomes from this generation:', str([float(f) for f in fit]))
     fitness_array = np.array(fit)
     return fitness_array, (sum(fitness_array)/pop.shape[0])
 
@@ -36,7 +36,6 @@ def save_fittest(pop, fitness):
 def crossover(parents, offspring_size):
     # creating children for next generation
     offspring = np.empty(offspring_size)
-
     for k in range(offspring_size[0]):
 
         while True:
@@ -55,12 +54,11 @@ def crossover(parents, offspring_size):
 
 def mutation(offspring_crossover):
     # mutating the offsprings generated from crossover to maintain variation in the population
-
     for idx in range(offspring_crossover.shape[0]):
-        for _ in range(25):
+        for _ in range(NUM_GENES_MUTATED):
             i = randint(0,offspring_crossover.shape[1]-1)
 
-        random_value = np.random.choice(np.arange(-1,1,step=0.001),size=(1),replace=False)
+        random_value = np.random.choice(np.arange(-1*MUTATION_RATE,MUTATION_RATE,step=0.001),size=(1),replace=False)
         offspring_crossover[idx, i] = offspring_crossover[idx, i] + random_value
 
     return offspring_crossover

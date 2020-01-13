@@ -41,6 +41,13 @@ plt.show()
 
 do_visualize = False
 
+def score_nn_specialization(array):
+    score = 0
+    for row in array:
+        if(abs(row) > 1):
+            score += 1
+    print('NN_SPECIALIZATION_SCORE:', score)
+
 log("Simulation with", num_generations, "generations")
 
 for generation in range(num_generations):
@@ -56,7 +63,7 @@ for generation in range(num_generations):
     fitness, avg_fitness = cal_pop_fitness(new_population, do_visualize)
     avg_fitness_array.append(avg_fitness)
     max_fitness_array.append(np.max(fitness))
-
+    score_nn_specialization(new_population[0,:])
 
     print('#######  fittest chromosome in generation ' + str(generation) +' has the fitness value:  ', np.max(fitness)
           , '\n And the average fitness value is:', avg_fitness)
@@ -77,7 +84,6 @@ for generation in range(num_generations):
     parents = select_mating_pool(new_population, fitness, num_parents_mating)
     # Generating next generation using crossover.
     offspring_crossover = crossover(parents, offspring_size=(pop_size[0] - parents.shape[0], pop_size[1]))
-
     # Adding some variations to the offsrping using mutation.
     offspring_mutation = mutation(offspring_crossover)
 
